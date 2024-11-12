@@ -1,0 +1,361 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:neon/utils/colors.dart';
+import 'package:neon/views/portflio/portfolio.dart';
+
+class CurrentInvestment extends StatelessWidget {
+  const CurrentInvestment({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.width;
+    return Scaffold(
+      backgroundColor: AppColor.backgroundColor,
+      body: Padding(
+        padding:
+            const EdgeInsets.only(top: 60, left: 20, right: 20, bottom: 20),
+        child: SingleChildScrollView(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.transparent,
+                  child: Image.asset("assets/iconabt.png"),
+                ),
+                SizedBox(
+                  width: width / 19.5,
+                ),
+                Text(
+                  "Portfolio",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 35,
+                      fontFamily: "SpaceGrotesk",
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Fund Title, by XYZ Fund Managers",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontFamily: "SpaceGrotesk",
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              "Total Amount Invested",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontFamily: "SpaceGrotesk",
+                  fontWeight: FontWeight.w100),
+            ),
+            Text(
+              "\$1,000,000.00",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontFamily: "SpaceGrotesk",
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "*as of april 2023",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontFamily: "SpaceGrotesk",
+                  fontWeight: FontWeight.w100),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            PortElement(
+              title1: "Earnings",
+              title2: "Returns",
+              subtitle1: "\$1,00,000.00",
+              subtitle2: "9%",
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Mode",
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 12,
+                          fontFamily: "SpaceGrotesk",
+                          fontWeight: FontWeight.w100),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "Lumpsum+SIP",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: "SpaceGrotesk",
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                Spacer(),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Category",
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 12,
+                          fontFamily: "SpaceGrotesk",
+                          fontWeight: FontWeight.w100),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "Gold",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: "SpaceGrotesk",
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                )
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 15),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Breakdown",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontFamily: "SpaceGrotesk",
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          Text("Total Investment",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                          Spacer(),
+                          Text("\$1,000,000.00",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text("Total Investment",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                          Spacer(),
+                          Text("\$1,000,000.00",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text("Total Investment",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                          Spacer(),
+                          Text("\$1,000,000.00",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text("Total Investment",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                          Spacer(),
+                          Text("\$1,000,000.00",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text("Total Investment",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                          Spacer(),
+                          Text("\$1,000,000.00",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text("Total Investment",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                          Spacer(),
+                          Text("\$1,000,000.00",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text("Total Investment",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                          Spacer(),
+                          Text("\$1,000,000.00",
+                              style: TextStyle(
+                                  color: AppColor.textColorGrey,
+                                  fontSize: 12,
+                                  fontFamily: "SpaceGrotesk",
+                                  fontWeight: FontWeight.w100)),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: Row(
+                          children: [
+                            Spacer(),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Pause",
+                                style: TextStyle(color: AppColor.lightPurple),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                // Navigator.of(context).push(
+                                //     MaterialPageRoute(builder: (context) => Account()));
+                              },
+                              child: Container(
+                                height: height / 10.06,
+                                width: width / 3.40,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [Colors.purple, Colors.deepPurple],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Invest More",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'SpaceGrotesk',
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w100),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ]),
+              ),
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
+}
